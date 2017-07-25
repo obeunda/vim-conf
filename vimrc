@@ -27,6 +27,7 @@ Plugin 'junegunn/goyo.vim'
 
 " Generic programming support
 Plugin 'vim-syntastic/syntastic'
+Plugin 'tomtom/tcomment_vim'
 
 " Git Support
 Plugin 'tpope/vim-fugitive'
