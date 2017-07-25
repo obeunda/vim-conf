@@ -4,6 +4,8 @@ syntax on
 set nowrap
 set encoding=utf8
 
+let mapleader = ","
+
 """" Vundle configuration
 
 set nocompatible              " be iMproved, required
@@ -19,9 +21,13 @@ Plugin 'VundleVim/Vundle.vim'
 " utility plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
+Plugin 'itchyny/lightline.vim'
 
 " Generic programming support
 Plugin 'vim-syntastic/syntastic'
+
+" Git Support
+Plugin 'tpope/vim-fugitive'
 
 " Markdown / Writting
 Plugin 'reedes/vim-pencil'
@@ -56,5 +62,20 @@ set expandtab
 
 " Always display the status line
 set laststatus=2
+
+" Enable Elite mode, No ARRRROWWS!!!!
+let g:elite_mode=1
+
+" Lightline configuration
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
 
 
