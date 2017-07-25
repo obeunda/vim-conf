@@ -74,7 +74,7 @@ set laststatus=2
 let g:elite_mode=1
 
 colorscheme minimalist
-set background=light
+set background=dark
 
 " search
 set ignorecase		                " Ignore case in search
